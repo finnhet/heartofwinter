@@ -1,0 +1,198 @@
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Heart of winter</title>
+    <div id="snowfall"></div>
+
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+        }
+
+        /* Header styling */
+        header {
+    background-color: #c00; /* Christmas red */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Dancing Script', cursive; /* Example festive font */
+}
+
+        /* Navigation menu styling */
+        nav {
+    background-color: #135523; /* Christmas green */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #fff; /* Snowflake border */
+    display: flex; /* Set display to flex */
+    justify-content: center; /* Center the items horizontally */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Set display to flex */
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffcc00; /* Christmas gold */
+}
+
+
+        /* Car Listing styling */
+        .car-listing {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .car-card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .car-image {
+            height: 200px;
+            background-size: cover;
+        }
+
+        .car-details {
+            padding: 10px;
+        }
+
+        .car-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .car-price {
+            color: #007BFF;
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Footer styling */
+        footer {
+    background-color: #c00; /* Christmas red */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: auto;
+}
+#snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Heart of winter </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+           
+            <li><a href="overons.html">over ons</a></li>
+        </ul>
+    </nav>
+
+    <h1> <center> Over ons</h1> </body> </center>
+<br>
+<center>
+<h2>Celeste: Hoofdredactie<br>
+    Mitchell: Eindredactie<br>
+    Max: Eindredactie<br>
+    Bilal: Eindredactie <br>
+    Jort: Beeldredactie<br>
+    Kyan: Beeldreactie<br>
+    Roos: Beelredactie </h2> </center>
+    </html>
+
+
+    <script>
+          document.addEventListener("DOMContentLoaded", function () {
+        const snowfallContainer = document.getElementById("snowfall");
+
+        // Function to create a snowflake
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.className = "snowflake";
+
+            // Randomize snowflake position and animation duration
+            const startPosition = Math.random() * 300;
+            const animationDuration = Math.random() * 3 + 3;
+
+            snowflake.style.left = startPosition + "vw";
+            snowflake.style.animationDuration = animationDuration + "s";
+
+            snowfallContainer.appendChild(snowflake);
+        }
+
+        // Create multiple snowflakes
+        for (let i = 0; i < 300; i++) {
+            createSnowflake();
+        }
+    });
+    </script>
+    
+
+    </div>
+    <footer>
+        &copy; Gemaakt door Heart of winter.       
+    </footer>
+</body>
+</html>
